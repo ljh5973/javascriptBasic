@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //랜덤한 실수 1미만의
+        var a= Math.random() * 101;
+        //실수를 -> 정수로 parseInt(), parseFloat()
+        var num1= parseInt(a);
+        console.log(num1);
+
+        //
+        var num2=parseInt(Math.random()*101);
+        console.log(num2);
+
+        if(num2 >= 90){
+            if(num2>=95){
+                console.log("A+입니다.")
+            }else{
+                console.log("A입니다.")
+            }
+        }else if(num2 >= 80){
+            console.log("B입니다");
+        }else if(num2 >=70){
+            console.log("C입니다.");
+        }else{
+            console.log("F입니다.")
+        }
+
+
+        console.log("-------------------------------------------");
+
+
+        var name="바";
+        switch(name){
+            
+            case "이순신":  console.log("이순신입니다.");
+                break;
+
+            case "바보":    console.log("바보입니다.");
+                break;
+            case "멍충이":  console.log("멍충이입니다.");
+                break
+            default : console.log("나니모 나캇타");
+        }
+    </script>
+    
+</body>
+</html>
