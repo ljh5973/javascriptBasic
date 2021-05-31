@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>CSS스타일 변경하기</h2>
+    <form>
+        <img src="img/a.jpg" id="img" width="200" style="border:3px solid black "> <br/>
+
+        <select class="select">
+            <option value="img/a.jpg">봄</option>
+            <option value="img/b.jpg">여름</option>
+            <option value="img/c.jpg">가을</option>
+            <option value="img/d.jpg">겨울</option>
+
+        </select>
+
+        <input type="color" class="input">
+    </form>
+
+    <script>
+        var select = document.querySelector(".select");
+        var img= document.getElementById("img");
+      
+        select.onchange=function(){ 
+           img.src=select.value;
+        }
+
+        var input=document.querySelector(".input");
+        input.onchange=function(){
+            console.log(input.value);
+            img.style.border="3px solid"+input.value;
+        }
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- addEventListener의 매개변수("이벤트의종류", 실행시킬함수.) -->
+    <button type="button" id="bt">기본이벤트3</button>
+
+    <script>
+            var bt= document.getElementById("bt");
+            console.log(bt);
+            function event(){
+                console.log("easy");
+            }
+          
+            bt.addEventListener("click", event);
+
+            bt.addEventListener("click", function(){
+                console.log("asdfasf");
+            });
+    </script>
+    
+</body>
+</html>

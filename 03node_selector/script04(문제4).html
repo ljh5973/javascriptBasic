@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body">
+    <section>
+        <div class="container">
+            <div class="main">
+                <div class="top">
+                    <h4 id="title">style속성 활용하기</h4>
+                </div>
+                <div class="box">
+                    <div class="dark">
+                        <button type="button" id="dark">어둡게</button>
+                    </div>
+                    <div class="light">
+                        <button type="button" id="light">밝게</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="down">
+                <div class="img">
+                    <img src="img/a.jpg" alt="">
+                </div>
+                <div class="content">
+                    <span id="content">
+                        이벤트 핸들러
+이벤트란?
+화면에서 클릭이나, 동작시 발생하는 동적인 기능입니다
+자바스크립트의 첫번째 강력한 기능이며, 사용방법만 암기하면 충분합니다
+태그와 스크립트의 이벤트를 연결하는 방식에는
+인라인 이벤트 모델, 기본 이벤트 모델, 표준 이벤트 모델이 있으며
+이벤트 앞에 on을 붙입니다.
+다음은 이벤트의 종류들입니
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <script>
+        var dark=document.getElementById("dark");
+        var light=document.getElementById("light");
+        var content=document.getElementById("content");
+        var title=document.getElementById("title");
+
+        var body=document.querySelector("body");
+        var border=document.querySelectorAll("div");
+        dark.onclick=function(){
+            body.style.backgroundColor="black";
+            for(var i=0; i<border.length; i++){
+                border[i].style.borderColor="white";
+            }
+            content.style.color="white";
+            title.style.color="white";
+
+        }
+        light.onclick=function(){
+            body.style.backgroundColor="white";
+            for(var i=0; i<border.length; i++){
+                border[i].style.borderColor="#777";
+            }
+            content.style.color="black";
+            title.style.color="black";
+        }
+    </script>
+</body>
+</html>
